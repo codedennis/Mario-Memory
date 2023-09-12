@@ -9,3 +9,74 @@ body {
     align-items: center;
 }
 
+main {
+    background: rgba(244, 244, 244, 0.5);
+    border-radius: 10px;
+    width: 1200px;
+    height: 580px;
+    top: 89px;
+    left: 40px;
+    padding: 80px;
+    display: flex;
+    gap: 120px;
+}
+
+#logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+#logo-mario {
+    width: 650px;
+    height: 280px;
+}
+
+#img-programar {
+    width: 400px;
+    height: 85px;
+}
+
+#logo-dennis {
+    width: 220px;
+    height: 50px;
+    margin-top: 30px;
+}
+
+#jogar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+#jogar p {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+    width: 375px;
+}
+
+#jogar button {
+    background-color: #049cd0;
+    border: 3px solid #f4f4f4;
+    width: 400px;
+    height: 104px;
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 87px;
+    text-align: center;
+    color: #f4f4f4;
+}
+
+#jogar button:hover {
+    color: #049cd0;
+    background-color: transparent;
+    border: 3px solid #049cd0;
+    cursor: pointer;
+}
+
