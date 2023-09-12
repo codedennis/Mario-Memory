@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="src/css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="src/css/jogo.css">
     <title>Mario Memory</title>
 </head>
 <body>
     <header>
-        <p>Round <span>01</span></p>
-        <p>Pontos: <span>00</span></p>
-        <button>Encerrar</button>
+        <div id="cano">
+            <p>Round <span>01</span></p>
+            <p>Pontos: <span>00</span></p>
+        </div>
+        <button id="btn-finish" >Encerrar</button>
     </header>
     <main>
         <img src="./src/img/QuestionBlock.png" alt="Card do Jogo">
