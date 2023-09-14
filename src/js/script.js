@@ -1,5 +1,6 @@
 const main = document.getElementById("main");
-
+const placarTag = document.getElementById("placar");
+const buttonEncerrar = document.getElementById("encerrar");
 let click01 = null;
 let click02 = null;
 let encontrados = 0;
@@ -7,16 +8,20 @@ let placar = 0;
 
 renderCard();
 
+buttonEncerrar.addEventListener("click", () => {
+    window.location.assign("../../index.html");
+  });
+
 function renderCard() {
   const arrDuplicado = [...personagens, ...personagens];
   const shufflePersonagens = shuffleArray(arrDuplicado);
   console.log(shufflePersonagens);
 
-  for (let index = 0; index < personagens.length; index++) {
+  for (let index = 0; index < shufflePersonagens.length; index++) {
     let carta = document.createElement("img");
     carta.id = shufflePersonagens[i].id;
     carta.addEventListener("click", clickCarta);
-    carta.src = "./src/img/QuestionBlock.png";
+    carta.src = "../src/img/QuestionBlock.png";
     main.appendChild(carta);
   }
 }
