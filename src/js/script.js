@@ -7,8 +7,27 @@ function renderCard() {
 
   for (let index = 0; index < personagens.length; index++) {
     let carta = document.createElement("img");
+    carta.id = shufflePersonagens[i].id;
+    carta.addEventListener("click", clickCarta);
     carta.src = "./src/img/QuestionBlock.png";
     main.appendChild(carta);
+  }
+}
+
+function clickCarta(event) {
+  const clickedImg = event.target;
+  let clickedId = event.target.id;
+
+  let clickedCharacter = personagens.find(
+    (elemento) => elemento.id == clickedId
+  );
+  clickedImg.src = clickedCharacter.img;
+
+  if (click01 == null) {
+    click01 = clickedImg;
+  } else {
+    click02 = clickedImg;
+    testPar();
   }
 }
 
