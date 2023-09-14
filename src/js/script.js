@@ -6,39 +6,39 @@ let click02 = null;
 let encontrados = 0;
 let placar = 0;
 
-renderCard();
+renderizarCartas();
 
 buttonEncerrar.addEventListener("click", () => {
-    window.location.assign("../../index.html");
-  });
+  window.location.assign("../../index.html");
+});
 
-function renderCard() {
+function renderizarCartas() {
   const arrDuplicado = [...personagens, ...personagens];
-  const shufflePersonagens = shuffleArray(arrDuplicado);
-  console.log(shufflePersonagens);
+  const personagensEmbaralhados = shuffleArray(arrDuplicado);
+  console.log(personagensEmbaralhados);
 
-  for (let index = 0; index < shufflePersonagens.length; index++) {
+  for (let i = 0; i < personagensEmbaralhados.length; i++) {
     let carta = document.createElement("img");
-    carta.id = shufflePersonagens[i].id;
+    carta.id = personagensEmbaralhados[i].id;
     carta.addEventListener("click", clickCarta);
-    carta.src = "../src/img/QuestionBlock.png";
+    carta.src = "./src/img/QuestionBlock.png";
     main.appendChild(carta);
   }
 }
 
 function clickCarta(event) {
-  const clickedImg = event.target;
-  let clickedId = event.target.id;
+  const imgClicada = event.target;
+  let idClicado = event.target.id;
 
-  let clickedCharacter = personagens.find(
-    (elemento) => elemento.id == clickedId
+  let personagemClicado = personagens.find(
+    (elemento) => elemento.id == idClicado
   );
-  clickedImg.src = clickedCharacter.img;
+  imgClicada.src = personagemClicado.img;
 
   if (click01 == null) {
-    click01 = clickedImg;
+    click01 = imgClicada;
   } else {
-    click02 = clickedImg;
+    click02 = imgClicada;
     testPar();
   }
 }
@@ -73,9 +73,9 @@ function testPar() {
 }
 
 function shuffleArray(arr) {
-  for (let index = arr.length - 1; index > 0; index--) {
-    const j = Math.floor(Math.random() * (index + 1));
-    [arr[index], arr[j]] = [arr[j], arr[index]];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
   }
   return arr;
 }

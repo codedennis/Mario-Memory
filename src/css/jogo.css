@@ -34,7 +34,7 @@ header {
     padding: 17px;
 }
 
-#btn-finish {
+#encerrar {
     background-color: #E52521;
     width: 200px;
     height: 60px;
@@ -50,7 +50,7 @@ header {
     line-height: 49px;
 }
 
-#btn-finish:hover {
+#encerrar:hover {
     color: #E52521;
     background-color: #f4f4f4;
     border: 3px solid #E52521;
