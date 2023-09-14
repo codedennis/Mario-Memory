@@ -71,6 +71,7 @@ main {
     line-height: 87px;
     text-align: center;
     color: #f4f4f4;
+    
 }
 
 #jogar button:hover {
@@ -80,3 +81,11 @@ main {
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+    color: #f4f4f4;
+}
+
+a:hover {
+    color: #049cd0;
+}
