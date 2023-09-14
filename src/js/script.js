@@ -39,33 +39,33 @@ function clickCarta(event) {
 }
 
 function testPar() {
-    if (click01.id == click02.id) {
-      console.log("encontrei um par!");
-      encontrados++;
+  if (click01.id == click02.id) {
+    console.log("encontrei um par!");
+    encontrados++;
+    click01 = null;
+    click02 = null;
+
+    if (encontrados == 4) {
+      placar++;
+      placarTag.innerHTML = placar;
+      encontrados = 0;
+
+      setTimeout(() => {
+        main.innerHTML = "";
+        renderizarCartas();
+      }, 2000);
+    }
+  } else {
+    setTimeout(() => {
+      click01.src = "./src/img/QuestionBlock.png";
+      click02.src = "./src/img/QuestionBlock.png";
       click01 = null;
       click02 = null;
-  
-      if (encontrados == 4) {
-        placar++;
-        placarTag.innerHTML = placar;
-        encontrados = 0;
-  
-        setTimeout(() => {
-          main.innerHTML = "";
-          renderizarCartas();
-        }, 2000);
-      }
-    } else {
-      setTimeout(() => {
-        click01.src = "./src/img/QuestionBlock.png";
-        click02.src = "./src/img/QuestionBlock.png";
-        click01 = null;
-        click02 = null;
-      }, 1000);
-  
-      console.log("não é par");
-    }
+    }, 1000);
+
+    console.log("não é par");
   }
+}
 
 function shuffleArray(arr) {
   for (let index = arr.length - 1; index > 0; index--) {
