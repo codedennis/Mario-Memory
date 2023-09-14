@@ -2,17 +2,13 @@ const main = document.getElementById("main");
 renderCard();
 function renderCard() {
   const arrDuplicado = [...personagens, ...personagens];
-
-  const shufflePersonagens = shuffleArray(personagens);
+  const shufflePersonagens = shuffleArray(arrDuplicado);
+  console.log(shufflePersonagens);
 
   for (let index = 0; index < personagens.length; index++) {
-    let cartaA = document.createElement("img");
-    cartaA.src = "./src/img/QuestionBlock.png";
-    let cartaB = document.createElement("img");
-    cartaB.src = "./src/img/QuestionBlock.png";
-
-    main.appendChild(cartaA);
-    main.appendChild(cartaB);
+    let carta = document.createElement("img");
+    carta.src = "./src/img/QuestionBlock.png";
+    main.appendChild(carta);
   }
 }
 
