@@ -29,7 +29,7 @@ O projeto está estruturado da seguinte forma:
    - 📁 `js`
 	   - 📄 `script.js`
 	   - 📄 `database.js`
-	- 📄 `README.me`
+  - 📄 `README.me`
 
 
 ## 👨🏻‍💻 Desenvolvedor
