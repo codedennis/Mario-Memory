@@ -18,6 +18,7 @@ Este é o repositório do projeto Mario Memory, desenvolvido para testar minha l
 
 O projeto está estruturado da seguinte forma:
 
+  - 📄 `README.me`
   - 📄 `index.html`
   - 📄`jogo.html`
   - 📁 `src`
@@ -29,7 +30,6 @@ O projeto está estruturado da seguinte forma:
    - 📁 `js`
 	   - 📄 `script.js`
 	   - 📄 `database.js`
-  - 📄 `README.me`
 
 
 ## 👨🏻‍💻 Desenvolvedor
